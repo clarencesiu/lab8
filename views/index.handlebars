@@ -18,7 +18,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
 
-	
+
 	<title>HCI Project Portfolio</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -196,16 +196,18 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				</div>
 				</div>
 		{{else}}
-			<div class="project" id="{{id}}">
-				<div class="thumbnail">
-					<a href="/project/{{id}}">
-						<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
-						<h4>{{title}}</h4>
-					</a>
-					<div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
-					<div class="details"></div>
+			{{#each projects}}
+				<div class="project" id="{{id}}">
+					<div class="thumbnail">
+						<a href="/project/{{id}}">
+							<img src="images/{{image}}" alt="Lorem Pixel image" class="img-responsive">
+							<h4>{{title}}</h4>
+						</a>
+						<div class="likeCtr"><button class="btn btn-default likeBtn">Like</button></div>
+						<div class="details"></div>
+					</div>
 				</div>
-			</div>
+			{{/each}}
 		{{/if}}
 
 
